@@ -1,0 +1,19 @@
+body {
+	background-color: #aec6cf;
+}
+
+#container {
+	background-color: white;
+	width: 85%;
+	margin: 2% auto 2% auto;
+}
+
+#title {
+	font-family: 'Audiowide', cursive;
+	color: #aec6cf;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 5em;
+}

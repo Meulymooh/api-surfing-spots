@@ -1,19 +1,42 @@
 body {
 	background-color: #aec6cf;
+	background-image: url("img/background.png");
+	background-repeat: repeat;
 }
 
-#container {
-	background-color: white;
+.container {
 	width: 85%;
 	margin: 2% auto 2% auto;
+	text-align: center;
 }
 
-#title {
-	font-family: 'Audiowide', cursive;
-	color: #aec6cf;
+.wrapper {
+	width: 100%;
+	background: white;
+	text-align: center;
 }
+
 
 h1 {
+	font-family: 'Audiowide', cursive;
+	color: #ffaf4d;
 	font-weight: bold;
 	font-size: 5em;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 2em;
+	color: black;
+	padding: 30px;
+}
+
+
+.card {
+	border: 1px solid grey;
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	margin: 5px;
 }

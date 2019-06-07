@@ -11,6 +11,7 @@ June 6th and 7th.
 
 ## Difficulties
 
+* Unfinished: generating a random spot card.
 * Trying not to spend too much time on styling.
 * Sorting out the JSON response alphabetically.   
 

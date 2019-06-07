@@ -39,8 +39,12 @@ function showList(event) {
           title.setAttribute("class", "card-title");
       let info = document.createElement("div");
           info.setAttribute("class", "card-text");
+      let image = document.createElement("img");
+          image.src = "img/surf.jpg";
+          image.className = "card-img-top";
       // Displaying cards
       surfingSpots.append(card);
+      card.append(image);
       card.append(body);
       body.append(title);
       // Inserting spots in cards

@@ -1,30 +1,46 @@
-// Fetch surfing spots
-var surfingSpots = document.querySelector('.surfingSpots');
+var button = document.getElementById("surfButton");
+    button.addEventListener("click", showList);
 
-fetch('http://api.spitcast.com/api/spot/all')
-  .then(response => response.json())
-  .then(data => {
+function showList(event) {
+  // Fetch surfing spots
+  var surfingSpots = document.querySelector('.surfingSpots');
+
+  fetch('http://api.spitcast.com/api/spot/all')
+    .then(response => response.json())
+    .then(data => {
     listSpots(surfingSpots, data);
-  })
-  .catch(error => console.error(error))
+    })
+    .catch(error => console.error(error))
 
+  // List spots
+  function listSpots (surfingSpots, spots) {
+    spots.sort(function(a,b)
+    {
+    if (a.spot_name < b.spot_name)
+      return -1;
+    else if  (a.spot_name > b.spot_name)
+      return 1;
+    else
+      return 0;
+    })
+    spots.forEach(spot => {
+      // Creating bootstrap cards
+      let card = document.createElement("div");
+          card.setAttribute("class", "card");
+      let body = document.createElement("div");
+          body.setAttribute("class", "card-body");
+      let title = document.createElement("div");
+          title.setAttribute("class", "card-title");
+      let info = document.createElement("div");
+          info.setAttribute("class", "card-text");
+      // Displaying cards
+      surfingSpots.append(card);
+      card.append(body);
+      body.append(title);
+      body.append(info);
+      // Inserting spots in cards
+      title.innerHTML = "<h4>" + spot.spot_name + "</h4>";
+    })
+  }
 
-// List spots
-function listSpots (surfingSpots, spots) {
-  // Creating bootstrap cards
-  spots.forEach(spot => {
-  let card = document.createElement("div");
-      card.setAttribute("class", "card");
-  let body = document.createElement("div");
-      body.setAttribute("class", "card-body");
-  let title = document.createElement("div");
-      title.setAttribute("class", "card-title");
-  let info = document.createElement("div");
-      info.setAttribute("class", "card-text");
-    surfingSpots.append(card);
-    card.append(body);
-    body.append(title);
-    body.append(info);
-    title.innerHTML = "<h4>" + spot.spot_name + "</h4>";
-  })
-}
+} // End of the function

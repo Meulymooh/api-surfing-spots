@@ -40,3 +40,8 @@ h3 {
 	display: inline-block;
 	margin: 5px;
 }
+
+#surfButton {
+	width: 20%;
+	padding-bottom: 50px;
+}

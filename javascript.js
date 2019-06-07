@@ -1,4 +1,4 @@
-var button = document.getElementById("surfButton");
+var button = document.getElementById("surfButton1");
     button.addEventListener("click", showList);
 
 function showList(event) {
@@ -14,6 +14,12 @@ function showList(event) {
 
   // List spots
   function listSpots (surfingSpots, spots) {
+    var spotList = document.getElementById("spotList");
+    if (spotList.style.display === "block") {
+      spotList.style.display = "none"
+    } else {
+      spotList.style.display = "block"
+    };
     spots.sort(function(a,b)
     {
     if (a.spot_name < b.spot_name)
@@ -37,10 +43,23 @@ function showList(event) {
       surfingSpots.append(card);
       card.append(body);
       body.append(title);
-      body.append(info);
       // Inserting spots in cards
       title.innerHTML = "<h4>" + spot.spot_name + "</h4>";
-    })
-  }
 
-} // End of the function
+      card.addEventListener('click', showDetails);
+
+      // Display details in cards
+      function showDetails() {
+        body.append(info);
+        if (info.style.display === "block") {
+          info.style.display = "none"
+        } else {
+          info.style.display = "block"
+        };
+        info.innerHTML = "<p><b>County:</b> " + spot.county_name + "</p><p><b>Spot ID:</b> " + spot.spot_id + "</p><p><b>Longitude:</b> " + spot.longitude + "</p><p><b>Latitude: </b>" + spot.latitude + "</p>";
+      } // End of details
+
+    }) // End of foreach
+  } // End of listSpots function
+
+} // End of showList function

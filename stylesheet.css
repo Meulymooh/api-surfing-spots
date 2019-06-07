@@ -6,7 +6,7 @@ body {
 
 .container {
 	width: 85%;
-	margin: 2% auto 2% auto;
+	margin: 2% auto 5% auto;
 	text-align: center;
 }
 
@@ -31,6 +31,24 @@ h3 {
 	padding: 30px;
 }
 
+h4 {
+	font-size: 1.5em;
+}
+
+.surfboard {
+	padding-bottom: 30px;
+}
+#surfButton1 {
+	width: 40%;
+}
+
+#surfButton2 {
+	width: 40%;
+}
+
+#spotList {
+	display: none;
+}
 
 .card {
 	border: 1px solid grey;
@@ -41,7 +59,14 @@ h3 {
 	margin: 5px;
 }
 
-#surfButton {
-	width: 20%;
-	padding-bottom: 50px;
+.card-text {
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: none;
+}
+
+#details {
+	padding-top: 40px;
+	padding-bottom: 20px;
 }

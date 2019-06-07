@@ -35,22 +35,29 @@
 
 <div class="container">
 
-	<div class="wrapper">
-		<div class="row text-center">
-			<h1>Surfin' USA</h1>
-		</div>
-		<div class="row text-center">
-			<h3>Click on the surfboard to get details</h3>
-		</div>
+	<div class="row wrapper">
 		<div class="row text-center" id="title">
-			<input type="image" id="surfButton" src="img/surfboard.png"/>
+			<a href="index.html"><h1>Surfin' USA !</h1> </a>
 		</div>
+	</div>
 
+	<div class="row wrapper">
+		<div class="col col-sm-6 text-center surfboard">
+			<h3>All spots</h3>
+			<input type="image" id="surfButton1" src="img/surfboard1.png"/>
+		</div>
+		<div class="col col-sm-6 text-center surfboard">		
+			<h3>Random spot</h3>
+			<input type="image" id="surfButton2" src="img/surfboard2.png"/>
+		</div>
 	</div>
 
 
-	<div class="wrapper">
+	<div class="row wrapper" id="spotList">
 		<div class="surfingSpots">
+			<div class="row text-center" id="details">
+				<h4><b>Click on the spot for details</b></h4>
+			</div>
 		</div>
 	</div>
 

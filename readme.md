@@ -9,11 +9,15 @@ Link: https://meulymooh.github.io/api-surfing-spots/index.html
 
 June 6th and 7th. 
 
+## Unfinished
+
+Optimizing my code (part of my code is doubled for "all cards" and "random card")
+
 ## Difficulties
 
-* Unfinished: generating a random spot card.
 * Trying not to spend too much time on styling.
 * Sorting out the JSON response alphabetically.   
+* Getting a random image. The API url we chose doesn't allow "/random".
 
 ## Feedback
 

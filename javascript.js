@@ -53,7 +53,7 @@ function showAll(event) {
       // Add random Flickr image 
       var keyword = "surfing wave";
       $(document).ready(function(){
-        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
         {
           tags: keyword,
           tagmode: "any",
@@ -135,7 +135,7 @@ function showRandom(event) {
     // Add random Flickr image 
     var keyword = "surfing wave";
     $(document).ready(function(){
-      $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+      $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
       {
         tags: keyword,
         tagmode: "any",

@@ -4,11 +4,9 @@ body {
 	background-repeat: repeat;
 }
 
-.container {
+.container-fluid {
 	width: 85%;
-	height: 90%;
 	margin: 2% auto 5% auto;
-	text-align: center;
 }
 
 .wrapper {
@@ -42,22 +40,21 @@ h4 {
 
 #surfButton1 {
 	width: 40%;
-	margin: 10%;
+	margin: 7%;
 }
 
 #surfButton2 {
 	width: 40%;
-	margin: 10%;
+	margin: 7%;
 }
 
 #surfButton3 {
-	width: 40%;
+	width: 50%;
 }
 
 .card {
 	border: 1px solid grey;
 	width: 320px;
-	margin: 0 auto;
 	text-align: center;
 	display: inline-block;
 	margin: 5px;

@@ -9,9 +9,17 @@ Link: https://meulymooh.github.io/api-surfing-spots/index.html
 
 June 6th and 7th. 
 
+## API Choice
+
+Jan and I were not very much into beer. Since Jan is a surfer, we chose a surfing spot API. We encountered 2 major problems with it (but too late):
+
+1. Unlike the beer API, we cannot add a "/random" at the end of the URL to fetch a random array. We have to use javascript's math function.
+
+2. The API URL is http. The exercise link on github is https. It's then causing a mixed-content error in the console. It's sometimes possible to solve the problem by adding an "s" to the http of the URL to fetch, but in this particular case, it doesn't work. So I'm now just hosting the json file in my repo to make it work on github.
+
 ## Unfinished
 
-Optimizing my code (part of my code is doubled for "all cards" and "random card")
+Optimizing my code (part of my code is doubled for "all cards" and "random card").
 
 ## Difficulties
 

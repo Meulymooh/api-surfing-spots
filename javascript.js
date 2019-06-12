@@ -7,7 +7,7 @@ function showAll(event) {
   // Fetch surfing spots
   var surfingSpots = document.querySelector('.surfingSpots');
 
-  fetch('http://api.spitcast.com/api/spot/all')
+  fetch('all.json')
     .then(response => response.json())
     .then(data => {
     listSpots(surfingSpots, data);
@@ -98,7 +98,7 @@ function showRandom(event) {
   // Fetch surfing spots
   var surfingSpots = document.querySelector('.surfingSpots');
 
-  fetch('http://api.spitcast.com/api/spot/all')
+  fetch('all.json')
     .then(response => response.json())
     .then(data => {
     listSpots(surfingSpots, data);

@@ -1,3 +1,18 @@
+var button3 = document.getElementById("surfButton3");
+    button3.addEventListener("click", removeSpots);
+
+function removeSpots (event) {
+  var surfingSpots = document.querySelector('.surfingSpots');
+  
+  surfingSpots.innerHTML = "";
+
+  if (spotList.style.display === "block") {
+    spotList.style.display = "none"
+  } else {
+    spotList.style.display = "block"
+  };
+}
+
 // Display all surfing spots from the API
 
 var button1 = document.getElementById("surfButton1");
@@ -6,6 +21,10 @@ var button1 = document.getElementById("surfButton1");
 function showAll(event) {
   // Fetch surfing spots
   var surfingSpots = document.querySelector('.surfingSpots');
+
+  if (spotList.style.display === "none") {
+    spotList.style.display = "block"
+  }
 
   fetch('all.json')
     .then(response => response.json())
@@ -17,11 +36,6 @@ function showAll(event) {
   // List surfing spots
   function listSpots (surfingSpots, spots) {
     var spotList = document.getElementById("spotList");
-    if (spotList.style.display === "block") {
-      spotList.style.display = "none"
-    } else {
-      spotList.style.display = "block"
-    };
     // Sort surfing spots alphabetically
     spots.sort(function(a,b)
     {
@@ -98,6 +112,10 @@ function showRandom(event) {
   // Fetch surfing spots
   var surfingSpots = document.querySelector('.surfingSpots');
 
+  if (spotList.style.display === "none") {
+    spotList.style.display = "block"
+  }
+
   fetch('all.json')
     .then(response => response.json())
     .then(data => {
@@ -107,12 +125,6 @@ function showRandom(event) {
 
   // List surfing spots
   function listSpots (surfingSpots, spots) {
-    var spotList = document.getElementById("spotList");
-    if (spotList.style.display === "block") {
-      spotList.style.display = "none";
-    } else {
-      spotList.style.display = "block"
-    };
 
     // Empty the div from previous card(s) and add instruction
     surfingSpots.innerHTML = "<h4><b>Click on the spot for more details</b></h4>";

@@ -13,7 +13,7 @@ June 6th and 7th.
 
 Jan and I were not very much into beer. Since Jan is a surfer, we chose a surfing spot API. We encountered 2 major problems with it (but too late):
 
-1. Unlike the beer API, we cannot add a "/random" at the end of the URL to fetch a random array. We have to use javascript's math function.
+1. Unlike the beer API, we cannot just add "/random" at the end of the URL to fetch a random array. We have to use javascript's math function.
 
 2. The surfing API and Flickr URLs are http. The exercise link on github is https. It's then causing a mixed-content error in the console. Adding an "s" to the Flickr API works, but it's not working with the surfing API. So I'm now just hosting the json file in my repo to make it work on github.
 

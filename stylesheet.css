@@ -39,16 +39,19 @@ h4 {
 .surfboard {
 	padding-bottom: 30px;
 }
+
 #surfButton1 {
 	width: 40%;
+	margin: 10%;
 }
 
 #surfButton2 {
 	width: 40%;
+	margin: 10%;
 }
 
-#spotList {
-	display: none;
+#surfButton3 {
+	width: 40%;
 }
 
 .card {
